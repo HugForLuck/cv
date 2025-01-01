@@ -1,0 +1,6 @@
+@if(loadingScreen.isLoading()) {
+  <div class="loading-screen" @fadeInOut>
+    Loading...  <!-- Your loading indicator/content -->
+    <button (click)="toggleLoading()">Toggle Loading</button>
+  </div>
+}
