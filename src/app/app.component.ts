@@ -9,10 +9,10 @@ import { LoadingScreenStore } from '../loadingScreen/loadingScreen.store';
   providers: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  readonly loadingScreen = inject(LoadingScreenStore)
+  readonly loadingScreen = inject(LoadingScreenStore);
 
   toggleLoading() {
     this.loadingScreen.toggleLoading();

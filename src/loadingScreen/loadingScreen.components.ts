@@ -1,11 +1,6 @@
-import {
-  animate,
-  style,
-  transition,
-  trigger
-} from '@angular/animations';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { LoadingScreenStore } from './loadingScreen.store';
+import { loadingFadeInOutAnimation } from './loadinScreen.animations';
 
 @Component({
   selector: 'app-loadingScreen',
@@ -14,15 +9,10 @@ import { LoadingScreenStore } from './loadingScreen.store';
   templateUrl: './loadingScreen.component.html',
   styleUrl: './loadingScreen.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [style({opacity: 0}), animate('1000ms', style({opacity: 1}))]),
-      transition(':leave', [animate('1000ms', style({opacity: 0}))]),
-      ]),
-  ]
+  animations: [loadingFadeInOutAnimation],
 })
 export class LoadingScreenComponent {
-  readonly loadingScreen = inject(LoadingScreenStore)
+  readonly loadingScreen = inject(LoadingScreenStore);
 
   toggleLoading() {
     this.loadingScreen.toggleLoading();

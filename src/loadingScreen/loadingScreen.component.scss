@@ -7,10 +7,11 @@
   background-color: rgba(white, 0.8); // Example semi-transparent background
   display: flex;
   justify-content: center; // Center content horizontally
-  align-items: center;     // Center content vertically
-  z-index: 9999;           // Ensure it's on top
+  align-items: center; // Center content vertically
+  z-index: 9999; // Ensure it's on top
 
-  &.fade-out { // Class to trigger the animation
+  &.fade-out {
+    // Class to trigger the animation
     opacity: 0;
   }
 }
