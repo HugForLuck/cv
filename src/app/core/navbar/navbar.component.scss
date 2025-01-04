@@ -1,0 +1,51 @@
+:host {
+  padding: 20px;
+}
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+
+    a {
+      color: #5300ee;
+      transition:
+        color 1s ease,
+        border-color 1s ease;
+      border-radius: 25px;
+      text-decoration: none;
+      line-height: 24px;
+      font-weight: 400;
+      display: inline-block;
+      padding: 10px 20px 10px 10px;
+      margin: 5px 0px;
+      border: 2px solid transparent;
+
+      .nav-icon {
+        color: #5300ee;
+        transition: color 1s ease;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0px 10px;
+      }
+
+      &:hover {
+        border-color: #5300ee;
+
+        .nav-icon {
+        }
+      }
+      &.active {
+        color: #fc0;
+        border-color: #fc0;
+
+        .nav-icon {
+          color: #fc0;
+        }
+      }
+    }
+  }
+}

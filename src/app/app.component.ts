@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LoadingScreenComponent } from './loadingScreen/loadingScreen.components';
-import { LoadingScreenStore } from './loadingScreen/loadingScreen.store';
-import { NavbarComponent } from './navbar/navbar.component';
+import { LoadingScreenComponent } from './core/loadingScreen/loadingScreen.components';
+import { LoadingScreenStore } from './core/loadingScreen/loadingScreen.store';
+import { NavbarComponent } from './core/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
